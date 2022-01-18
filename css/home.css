@@ -1,0 +1,95 @@
+/*body {
+    overflow: hidden;
+}*/
+header{
+    height: 100vh;
+    background-image: url("../img/fondtrame.jpg");
+    background-size: cover;
+}
+
+header>.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>.wrap>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header span{
+    margin: 0 0 30px 0;
+    font-size: 2em;
+}
+
+.header_links{
+    display: flex;
+    gap: 30px;
+}
+
+
+
+.intro_container{
+    height: 100vh;
+}
+
+.intro_container>.wrap{
+    flex-direction: initial;
+}
+
+.intro_container>.wrap>div{
+    width: 50%;
+}
+
+.intro_container .phone_content img{
+    max-width: 50%;
+}
+
+.intro_container .description_content p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.intro_container .description_content>div{
+    display: flex;
+}
+
+.intro_container .description_content>div a{
+    background-color: #1B17E2;
+    color: #F9F9F9;
+}
+
+.intro_container .description_content>a{
+    color: #A5A5A5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+section{
+    height: 100vh;
+}
+
+.aqua{
+    background-color: aqua;
+}
+.darkred{
+    background-color: darkred;
+}
+.chartreuse{
+    background-color: chartreuse;
+}
+.darkorange{
+    background-color: darkorange;
+}

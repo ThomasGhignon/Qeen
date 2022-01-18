@@ -1,0 +1,8 @@
+@import "libs/cssReset.css";
+
+@import "config/basic.css";
+@import "config/font.css";
+
+@import "asset/footer.css";
+
+@import "home.css";
