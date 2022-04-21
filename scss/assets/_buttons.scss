@@ -1,0 +1,24 @@
+.button {
+    display: block;
+    width: max-content;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 15px 40px;
+    margin-top: 1rem;
+
+    border-radius: 51px 51px 51px 51px;
+    border: 0px solid #000000;
+
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: medium;
+
+    &-dark {
+        background-color: $black;
+        color: white !important;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+}

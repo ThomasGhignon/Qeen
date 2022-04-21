@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,7 +25,6 @@ time, mark, audio, video {
 }
 
 .wrap {
-  max-width: 1440px;
   width: 100%;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -53,29 +52,16 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 a {
   font-size: .8em;
   text-decoration: none;
-  color: #F9F9F9;
 }
 
 span {
   color: #F9F9F9;
-}
-
-.button {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #F9F9F9;
-  padding: 15px 40px;
-  border-radius: 51px 51px 51px 51px;
-  -moz-border-radius: 51px 51px 51px 51px;
-  -webkit-border-radius: 51px 51px 51px 51px;
-  border: 0px solid #000000;
-  color: #000000;
 }
 
 @font-face {
@@ -184,6 +170,95 @@ footer .wrap > div:nth-child(2) span {
   max-width: 20px;
   max-height: 20px;
   fill: #1B17E2;
+}
+
+.section {
+  position: relative;
+  padding: 4rem 8rem;
+}
+
+.section-background {
+  position: absolute;
+  top: 22%;
+  width: 52%;
+  height: 20%;
+  margin-left: -8rem;
+  background-color: #38F4B0;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  z-index: -1;
+}
+
+.section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-container .section-image {
+  width: 40vw;
+}
+
+.section-container .section-image img {
+  width: 60%;
+  margin-left: 14rem;
+}
+
+.section-container .section-content {
+  width: 35vw;
+}
+
+.section-container .section-content .section-title {
+  margin-bottom: 1rem;
+}
+
+.section-container .section-content .section-description {
+  font-size: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: medium;
+  color: #A5A5A5;
+}
+
+.section-container .section-content .section-description > a {
+  display: block;
+  margin: 2rem 0;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: bold;
+  color: #A5A5A5;
+  text-decoration: underline;
+}
+
+.button {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 15px 40px;
+  margin-top: 1rem;
+  border-radius: 51px 51px 51px 51px;
+  border: 0px solid #000000;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: medium;
+}
+
+.button-dark {
+  background-color: #0B0B16;
+  color: white !important;
+}
+
+.button a {
+  text-decoration: none !important;
 }
 
 /*body {
