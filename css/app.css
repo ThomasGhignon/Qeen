@@ -77,6 +77,10 @@ footer {
   padding: 0 0 20px 0;
 }
 
+footer a:not(.lang_links a) {
+  color: white;
+}
+
 footer a:not(.lang_links a):hover {
   color: #38F4B0;
 }
@@ -174,13 +178,15 @@ footer .wrap > div:nth-child(2) span {
 
 .section {
   position: relative;
-  padding: 4rem 8rem;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 5rem 8rem;
 }
 
 .section-background {
   position: absolute;
   top: 22%;
-  width: 52%;
+  width: 50%;
   height: 20%;
   margin-left: -8rem;
   background-color: #38F4B0;
@@ -206,8 +212,27 @@ footer .wrap > div:nth-child(2) span {
 }
 
 .section-container .section-image img {
+  position: relative;
   width: 60%;
-  margin-left: 14rem;
+  margin-left: 8rem;
+}
+
+.section-container .section-image-hidden {
+  position: absolute;
+  bottom: 10rem;
+  left: 21rem;
+  z-index: -1;
+}
+
+.section-container .section-image-showned {
+  position: absolute;
+  bottom: 13rem;
+  right: 15rem;
+  z-index: -1;
+}
+
+.section-container .section-image-showned img {
+  width: 70%;
 }
 
 .section-container .section-content {
@@ -233,6 +258,10 @@ footer .wrap > div:nth-child(2) span {
   font-weight: bold;
   color: #A5A5A5;
   text-decoration: underline;
+}
+
+.section-container .section-content .section-description p:last-of-type {
+  margin-bottom: 2rem;
 }
 
 .button {
@@ -348,10 +377,6 @@ header span {
 .intro_container .description_content > a {
   color: #A5A5A5;
   font-family: 'Montserrat', sans-serif;
-}
-
-section {
-  height: 100vh;
 }
 
 .aqua {

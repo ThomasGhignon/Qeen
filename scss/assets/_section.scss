@@ -2,12 +2,14 @@
     $this: '.section'; 
 
     position: relative;
-    padding: 4rem 8rem;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 5rem 8rem;
 
     &-background{
         position: absolute;
         top: 22%;
-        width: 52%;
+        width: 50%;
         height: 20%;
         margin-left: -8rem;
         background-color: $secondary;
@@ -22,11 +24,31 @@
         justify-content: space-between;
         
         #{$this}-image{
+            
             width: 40vw;
 
             img{
+                position: relative;
                 width: 60%;
-                margin-left: 14rem;
+                margin-left: 8rem;
+            }
+
+            &-hidden{
+                position: absolute;
+                bottom: 10rem;
+                left: 21rem;
+                z-index: -1;
+            }
+
+            &-showned{
+                position: absolute;
+                bottom: 13rem;
+                right: 15rem;
+                z-index: -1;
+
+                img{
+                    width: 70%;
+                }
             }
         }
 
@@ -50,6 +72,12 @@
                     font-weight: bold;
                     color: $content;
                     text-decoration: underline;
+                }
+
+                p{
+                    &:last-of-type{
+                        margin-bottom: 2rem;
+                    }
                 }
             }
         }
