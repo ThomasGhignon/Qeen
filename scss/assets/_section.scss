@@ -1,6 +1,7 @@
 .section {
     $this: '.section'; 
 
+    box-sizing: border-box;
     position: relative;
     height: 100vh;
     max-height: 100vh;
@@ -24,7 +25,6 @@
         justify-content: space-between;
         
         #{$this}-image{
-            
             width: 40vw;
 
             img{
@@ -42,7 +42,7 @@
 
             &-showned{
                 position: absolute;
-                bottom: 13rem;
+                bottom: 3rem;
                 right: 15rem;
                 z-index: -1;
 
@@ -61,7 +61,7 @@
             #{$this}-description{
                 font-size: 1.5rem;
                 font-family: 'Montserrat';
-                font-weight: medium;
+                font-weight: 300;
                 color: $content;
 
                 & > a{
@@ -80,6 +80,97 @@
                     }
                 }
             }
+        }
+    }
+
+    &-short{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        #{$this}-background{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        #{$this}-container{
+            #{$this}-image{
+                img{
+                    position: relative;
+                    width: 60%;
+                    margin-left: 0;
+                }
+            }
+
+            #{$this}-content{
+                align-self: center;
+                width: 45vw;
+            }
+        }
+    }
+
+    &-bg-primary{
+        position: relative;
+        background-color: $primary;
+        color: white;
+        padding: 5rem 5rem;
+        padding-top: 0rem;
+
+        #{$this}-content{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            & > div:first-of-type {
+                align-self: flex-start;
+
+                h2{
+                    font-size: 5rem;
+                    margin-bottom: 0;
+                }
+                
+                h2:nth-child(3) {
+                    font-size: 15rem;
+                    line-height: 12rem;
+                }
+            }
+
+            .button{
+                justify-self: center;
+                margin-top: 2rem;
+            }
+        }
+
+        .banner-background{
+            position: absolute;
+            height: 45vh;
+            width: 105vw;
+            background-color: $primary;
+            left: 0;
+            top: -11rem;
+            z-index: -1;
+            transform: rotateZ(-15deg);
+        }
+    }
+}
+
+.banner{
+    position: relative;
+    overflow: hidden;
+
+    &-events{
+        padding: 1rem 0;
+        border-top: 1rem solid $secondary;
+        padding-bottom: 12rem;
+        transform: rotate(345deg);
+        margin-left: -5rem;
+        margin-right: -5rem;
+
+        h2{
+            white-space: nowrap;
         }
     }
 }

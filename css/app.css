@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,6 +40,11 @@ time, mark, audio, video {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 h1, h2, a, span {
@@ -68,6 +73,12 @@ span {
   font-family: 'agd';
   src: url("../../font/AGD.ttf") format("truetype");
   font-weight: 800;
+}
+
+@font-face {
+  font-family: 'agw';
+  src: url("../../font/AGW.ttf") format("truetype");
+  font-weight: 300;
 }
 
 footer {
@@ -177,6 +188,8 @@ footer .wrap > div:nth-child(2) span {
 }
 
 .section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   height: 100vh;
   max-height: 100vh;
@@ -226,7 +239,7 @@ footer .wrap > div:nth-child(2) span {
 
 .section-container .section-image-showned {
   position: absolute;
-  bottom: 13rem;
+  bottom: 3rem;
   right: 15rem;
   z-index: -1;
 }
@@ -246,7 +259,7 @@ footer .wrap > div:nth-child(2) span {
 .section-container .section-content .section-description {
   font-size: 1.5rem;
   font-family: 'Montserrat';
-  font-weight: medium;
+  font-weight: 300;
   color: #A5A5A5;
 }
 
@@ -264,6 +277,111 @@ footer .wrap > div:nth-child(2) span {
   margin-bottom: 2rem;
 }
 
+.section-short {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-short .section-background {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section-short .section-container .section-image img {
+  position: relative;
+  width: 60%;
+  margin-left: 0;
+}
+
+.section-short .section-container .section-content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 45vw;
+}
+
+.section-bg-primary {
+  position: relative;
+  background-color: #1B17E2;
+  color: white;
+  padding: 5rem 5rem;
+  padding-top: 0rem;
+}
+
+.section-bg-primary .section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.section-bg-primary .section-content > div:first-of-type {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.section-bg-primary .section-content > div:first-of-type h2 {
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.section-bg-primary .section-content > div:first-of-type h2:nth-child(3) {
+  font-size: 15rem;
+  line-height: 12rem;
+}
+
+.section-bg-primary .section-content .button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 2rem;
+}
+
+.section-bg-primary .banner-background {
+  position: absolute;
+  height: 45vh;
+  width: 105vw;
+  background-color: #1B17E2;
+  left: 0;
+  top: -11rem;
+  z-index: -1;
+  -webkit-transform: rotateZ(-15deg);
+          transform: rotateZ(-15deg);
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-events {
+  padding: 1rem 0;
+  border-top: 1rem solid #38F4B0;
+  padding-bottom: 12rem;
+  -webkit-transform: rotate(345deg);
+          transform: rotate(345deg);
+  margin-left: -5rem;
+  margin-right: -5rem;
+}
+
+.banner-events h2 {
+  white-space: nowrap;
+}
+
 .button {
   display: block;
   width: -webkit-max-content;
@@ -278,7 +396,22 @@ footer .wrap > div:nth-child(2) span {
   border: 0px solid #000000;
   font-family: "Montserrat";
   font-size: 1rem;
-  font-weight: medium;
+  font-weight: bold;
+}
+
+.button-outlined {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.button-outlined-dark {
+  border-color: #0B0B16;
+  color: #0B0B16;
+}
+
+.button-outlined-light {
+  border-color: white;
+  color: white;
 }
 
 .button-dark {
@@ -286,8 +419,135 @@ footer .wrap > div:nth-child(2) span {
   color: white !important;
 }
 
+.button-light {
+  background-color: white;
+  color: #0B0B16 !important;
+}
+
 .button a {
   text-decoration: none !important;
+}
+
+.text-primary {
+  color: #1B17E2;
+}
+
+.text-secondary {
+  color: #38F4B0;
+}
+
+.text-medium {
+  font-weight: medium;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.badge {
+  background-color: #38F4B0;
+  padding: 1.2rem 3rem;
+}
+
+.badge-primary {
+  background-color: #1B17E2;
+  color: #0B0B16;
+  font-size: 1rem;
+}
+
+.badge-secondary {
+  background-color: #38F4B0;
+  color: #0B0B16;
+  font-size: 1.5rem;
+}
+
+.badge#header-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 0;
+  -webkit-transform: rotateZ(12deg);
+          transform: rotateZ(12deg);
+}
+
+.loop-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  width: 112vw;
+  overflow: hidden;
+}
+
+.loop-holder__text-left {
+  -webkit-animation: textLoopLeft 10s linear infinite;
+          animation: textLoopLeft 10s linear infinite;
+  font-size: 3rem;
+  padding-right: 0.35em;
+}
+
+.loop-holder-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  width: 112vw;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.loop-holder-right__text-right {
+  -webkit-animation: textLoopRight 10s linear infinite;
+          animation: textLoopRight 10s linear infinite;
+  font-size: 3rem;
+  padding-left: 0.35em;
+}
+
+@-webkit-keyframes textLoopLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+}
+
+@keyframes textLoopLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+}
+
+@-webkit-keyframes textLoopRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+}
+
+@keyframes textLoopRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
 }
 
 /*body {
@@ -297,6 +557,11 @@ header {
   height: 100vh;
   background-image: url("../img/fondtrame.jpg");
   background-size: cover;
+}
+
+header span {
+  margin: 0 0 30px 0;
+  font-size: 2em;
 }
 
 header > .wrap {
@@ -327,16 +592,25 @@ header > .wrap > div {
           align-items: center;
 }
 
-header span {
-  margin: 0 0 30px 0;
-  font-size: 2em;
+.header {
+  position: relative;
 }
 
-.header_links {
+.header-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+}
+
+.header-title {
+  z-index: 3;
+}
+
+.header-subtitle {
+  text-align: center;
+  font-family: "agd";
+  font-size: 1.5rem;
 }
 
 .intro_container {

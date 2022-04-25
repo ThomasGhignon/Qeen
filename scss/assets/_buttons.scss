@@ -11,11 +11,31 @@
 
     font-family: "Montserrat";
     font-size: 1rem;
-    font-weight: medium;
+    font-weight: bold;
+
+    &-outlined {
+        background-color: transparent;
+        border: 1px solid;
+
+        &-dark {
+            border-color: $black;
+            color: $black;
+        }
+
+        &-light {
+            border-color: white;
+            color: white;
+        }
+    }
 
     &-dark {
         background-color: $black;
         color: white !important;
+    }
+
+    &-light {
+        background-color: white;
+        color: $black !important;
     }
 
     a {

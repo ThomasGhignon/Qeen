@@ -1,0 +1,56 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//
+//             Typography
+//
+//
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+//             Text 
+//////////////////////////////////////////////////////////////////////////
+.text {
+    &-primary{
+       color: $primary; 
+    }
+
+    &-secondary{
+        color: $secondary;
+    }
+
+    &-medium{
+        font-weight: medium;
+    }
+
+    &-bold{
+        font-weight: bold;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+//             Badge
+//////////////////////////////////////////////////////////////////////////
+.badge {
+    background-color: $secondary;
+    padding: 1.2rem 3rem;
+
+    &-primary{
+        background-color: $primary;
+        color: $black;
+        font-size: 1rem;
+    }
+
+    &-secondary{
+        background-color: $secondary;
+        color: $black;
+        font-size: 1.5rem;
+    }
+
+    &#header-badge {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 0;
+        transform: rotateZ(12deg);
+    }
+}

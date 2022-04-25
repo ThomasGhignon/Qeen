@@ -1,0 +1,52 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//
+//             Animations
+//
+//
+//////////////////////////////////////////////////////////////////////////
+
+.loop-holder {
+    display: flex;
+    white-space: nowrap;
+    width: 112vw;
+    overflow: hidden;
+
+    &__text-left {
+        animation: textLoopLeft 10s linear infinite;
+        font-size: 3rem;
+        padding-right: 0.35em;
+    }
+}
+
+.loop-holder-right{
+    display: flex;
+    white-space: nowrap;
+    width: 112vw;
+    overflow: hidden;
+    flex-direction: row-reverse;
+
+    &__text-right {
+        animation: textLoopRight 10s linear infinite;
+        font-size: 3rem;
+        padding-left: 0.35em;
+    }
+}
+
+@keyframes textLoopLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60%);
+    }
+}
+
+@keyframes textLoopRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(60%);
+    }
+}
