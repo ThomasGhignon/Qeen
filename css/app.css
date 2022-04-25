@@ -42,7 +42,7 @@ time, mark, audio, video {
           flex-direction: column;
 }
 
-h1, h2, a, span {
+h1, h2, a, span, h3, h4 {
   font-family: 'agd', sans-serif;
 }
 
@@ -53,6 +53,16 @@ h1 {
 
 h2 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #F9F9F9;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #F9F9F9;
 }
 
 a {
@@ -262,6 +272,94 @@ footer .wrap > div:nth-child(2) span {
 
 .section-container .section-content .section-description p:last-of-type {
   margin-bottom: 2rem;
+}
+
+.section-container .section-banner {
+  width: 100%;
+}
+
+.section-container .section-banner .section-title {
+  margin-bottom: 1rem;
+}
+
+.section-container .section-banner .section-description {
+  font-size: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: medium;
+  color: #A5A5A5;
+  padding-right: 25rem;
+}
+
+.section-container .section-banner .section-description > a {
+  display: block;
+  margin: 2rem 0;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: bold;
+  color: #A5A5A5;
+  text-decoration: underline;
+}
+
+.section-container .section-banner .section-description p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.section-container .section-artist {
+  width: calc(100% + 16rem);
+  margin-left: -8rem;
+  margin-right: -8rem;
+}
+
+.section-container .section-artist .section-carousel {
+  height: 100%;
+  margin: 2rem 0;
+}
+
+.section-container .section-artist .section-carousel .section-cell {
+  background-color: #38F4B0;
+  border-radius: 1rem;
+  padding: 2rem 5rem;
+  width: 25vw;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 1rem;
+  background-image: url(../../img/fondtrame.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-container .section-artist .section-carousel .section-cell > * {
+  text-align: center;
+}
+
+.section-container .section-artist .section-carousel .flickity-page-dots {
+  bottom: -50px;
+}
+
+.section-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#section-event {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .button {

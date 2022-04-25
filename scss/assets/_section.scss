@@ -81,5 +81,83 @@
                 }
             }
         }
+        #{$this}-banner{
+            width: 100%;
+
+            #{$this}-title{
+                margin-bottom: 1rem;
+            }
+            #{$this}-description{
+                font-size: 1.5rem;
+                font-family: 'Montserrat';
+                font-weight: medium;
+                color: $content;
+                padding-right: 25rem;
+
+                & > a{
+                    display: block;
+                    margin: 2rem 0;
+                    font-family: 'Montserrat';
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: $content;
+                    text-decoration: underline;
+                }
+
+                p{
+                    &:last-of-type{
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+
+        #{$this}-artist{
+            width: calc(100% + 16rem);
+            margin-left: -8rem;
+            margin-right: -8rem;
+
+            #{$this}-carousel{
+                height: 100%;
+                margin: 2rem 0;
+
+                #{$this}-cell{
+                    background-color: $secondary;   
+                    border-radius: 1rem;
+
+                    padding: 2rem 5rem;
+
+                    width: 25vw;
+                    height: 200px;
+                    display: flex;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0 1rem;
+
+                    background-image: url(../../img/fondtrame.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    >*{
+                        text-align: center;
+                    }
+                }
+
+                .flickity-page-dots{
+                    bottom: -50px
+                }
+            }
+        }
     }
+
+    &-col{
+        flex-direction: column;
+    }
+}
+
+#section-event{
+    height: max-content;
 }
