@@ -553,7 +553,6 @@ footer .wrap > div:nth-child(2) span {
 
 .button-container .button:hover {
   cursor: pointer;
-  background-color: red;
 }
 
 .button-container .button:hover .button-hover-image {
