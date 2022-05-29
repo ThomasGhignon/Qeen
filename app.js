@@ -37,3 +37,20 @@ function section_coverage(){
         })
     }
 }
+
+var elem = document.querySelector('.section-carousel');
+var flkty = new Flickity( elem, {
+  wrapAround: true,
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: true,
+  autoPlay: 2000,
+  prevNextButtons: false,
+  groupCells: true,
+});
+
+// element argument can be a selector string
+//   for an individual element
+var flkty = new Flickity( '.section-carousel', {
+  // options
+});

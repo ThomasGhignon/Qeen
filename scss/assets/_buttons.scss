@@ -1,44 +1,74 @@
-.button {
-    display: block;
+.button-container {
+    position: relative;
     width: max-content;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    padding: 15px 40px;
-    margin-top: 1rem;
 
-    border-radius: 51px 51px 51px 51px;
-    border: 0px solid #000000;
-
-    font-family: "Montserrat";
-    font-size: 1rem;
-    font-weight: bold;
-
-    &-outlined {
-        background-color: transparent;
-        border: 1px solid;
-
+    .button {
+        display: block;
+        width: max-content;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        padding: 15px 40px;
+        margin-top: 1rem;
+        z-index: 20;
+    
+        border-radius: 51px 51px 51px 51px;
+        border: 0px solid #000000;
+    
+        font-family: "Montserrat";
+        font-size: 1rem;
+        font-weight: bold;
+    
+        &-outlined {
+            background-color: transparent;
+            border: 1px solid;
+    
+            &-dark {
+                border-color: $black;
+                color: $black;
+            }
+    
+            &-light {
+                border-color: white;
+                color: white;
+            }
+        }
+    
         &-dark {
-            border-color: $black;
-            color: $black;
+            background-color: $black;
+            color: white !important;
         }
-
+    
         &-light {
-            border-color: white;
-            color: white;
+            background-color: white;
+            color: $black !important;
         }
-    }
+    
+        a {
+            text-decoration: none !important;
+        }
+    
+        &-hover-image{
+            position: absolute;
+            bottom: -1.2rem;
+            right: 0;
+            width: 4rem;
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease-in-out;
+    
+            img{
+                width: 100%;
+            }
+        }
 
-    &-dark {
-        background-color: $black;
-        color: white !important;
-    }
-
-    &-light {
-        background-color: white;
-        color: $black !important;
-    }
-
-    a {
-        text-decoration: none !important;
+        &:hover{
+            cursor: pointer;
+            background-color: red;
+    
+            .button-hover-image{
+                transform: translateY(-2rem);
+            }
+        }
     }
 }
+
+
